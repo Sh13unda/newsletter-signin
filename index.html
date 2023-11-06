@@ -14,39 +14,46 @@
 </head>
 <body>
   <div class="container">
-    <section>
-      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="sign-up image">
-    </section>
-  
-    <!-- Sign-up form start -->
-    <section>
-      Stay updated!
-  
-      Join 60,000+ product managers receiving monthly updates on:
-    
-      Product discovery and building what matters
-      Measuring to ensure updates are a success
-      And much more!
-    
-      Email address
-      email@company.com
-    
-      Subscribe to monthly newsletter
-    </section>
+    <div class="row">
+      <section class="container col-md-6 order-md-2">
+        <div class="row">
+          <div class="col-12">
+            <img class="img-fluid d-block d-md-none" src="./assets/images/illustration-sign-up-mobile.svg" alt="sign-up image">
+            <img class="img-fluid d-none d-md-block" src="./assets/images/illustration-sign-up-desktop.svg" alt="sign-up image">
+          </div>
+        </div>
+      </section>
+
+      <!-- Sign-up form start -->
+      <section class="col-md-6 order-md-1">
+        Stay updated!
+
+        Join 60,000+ product managers receiving monthly updates on:
+      
+        Product discovery and building what matters
+        Measuring to ensure updates are a success
+        And much more!
+      
+        Email address
+        email@company.com
+      
+        Subscribe to monthly newsletter
+      </section>
+    </div>
+  </div>
   
     <!-- Sign-up form end -->
   
     <!-- Success message start -->
-    <section class="bg-primary">
-      Thanks for subscribing!
-  
-      A confirmation email has been sent to ash@loremcompany.com. 
-      Please open it and click the button inside to confirm your subscription.
-  
-      Dismiss message
-    </section>
-    <!-- Success message end -->
-  </div>
+  <section class="d-none">
+    Thanks for subscribing!
+
+    A confirmation email has been sent to ash@loremcompany.com. 
+    Please open it and click the button inside to confirm your subscription.
+
+    Dismiss message
+  </section>
+  <!-- Success message end -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
