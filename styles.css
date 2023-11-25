@@ -1,31 +1,115 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    min-height: 100vh;
+  min-height: 100vh;
+  line-height: 1.5;
 }
 
-.news-header {
-    color: hsl(234, 29%, 20%);
-    font-weight: 700;
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
-#button {
-    color: hsl(0, 0%, 100%);
-    font-weight: 400;
-    background-color: hsl(234, 29%, 20%);
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+*, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%);
- }
+:root {
+  /* PRIMARY */
+  --tomato: hsl(4, 100%, 67%);
+  --tomato-light: hsl(4, 100%, 95%);
+  /* NEUTRAL */
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+  /* GRADIENT */
+  --gradient-pink: #ff3e83;
+  --gradient-orange: #fd634a;
+  --gradient-shadow: #ff3e8355;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  text-wrap: wrap;
+  background-color: var(--charcoal-grey);
+  min-width: 28rem;
+  min-height: calc(100vh - 5rem);
+  overflow: none;
+}
+
+.card {
+  width: 100%;
+  max-width: 48rem;
+  border-radius: 12px;
+  background-color: var(--white);
+  color: var(--dark-slate-grey);
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+ul {
+  list-style-image: url("https://raw.githubusercontent.com/josh76543210/Frontend-Mentor---Newsletter-sign-up-form-with-success-message-solution/6e1b96d58e9a1347d120762981164f15d2f55cc1/assets/images/icon-list.svg");
+}
+
+input[type="email"] {
+  border: none;
+  border: 0.1rem solid var(--grey);
+  border-radius: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--dark-slate-grey);
+  border-radius: 0.5rem;
+  border: none;
+}

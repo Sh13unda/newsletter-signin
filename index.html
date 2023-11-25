@@ -1,70 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" type="text/css" href="./styles.css" >
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="./styles.css" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-</head>
-<body class="d-flex flex-column align-items-center justify-content-center">
-  <main class="container p-md-2 border border-danger">
-    <div class="row">
-      <section class="container col-md-6 order-md-2 border border-primary">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <div>
-              <img class="img-fluid d-block d-md-none" src="./assets/images/illustration-sign-up-mobile.svg" alt="sign-up image">
-              <img class="img-fluid d-none d-md-block" src="./assets/images/illustration-sign-up-desktop.svg" alt="sign-up image">
-            </div>
-          </div>
+  </head>
+  <body>
+    <main class="card m-auto p-sm-3 d-sm-flex flex-sm-row gap-3">
+        <picture class="order-sm-2">
+          <source media="(min-width: 28.9rem)" srcset="https://raw.githubusercontent.com/Abdoulaye33/Newsletter-sign-up-form-with-success-message/dd4e5d51d107bb56fb606c58e48450cb57df3338/assets/images/illustration-sign-up-desktop.svg">
+          <img src="https://raw.githubusercontent.com/Abdoulaye33/Newsletter-sign-up-form-with-success-message/dd4e5d51d107bb56fb606c58e48450cb57df3338/assets/images/illustration-sign-up-mobile.svg">
+        </picture>
+
+        <div class="card-body py-5 px-4 d-flex flex-column gap-3">
+          <h1>Stay updated!</h1>
+
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="px-3 d-flex flex-column gap-3">
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+          
+          <form class="d-flex flex-column gap-2" autocomplete="on">
+            <label for="email">Email address</label>
+            <input class="mb-3 py-2 px-3" id="email" type="email" placeholder="email@company.com" />
+            <span class="d-none">Valid email required</span>
+            <button class="py-3">Subscribe to monthly newsletter</button>
+          </form>
         </div>
-      </section>
-
-      <!-- Sign-up form start -->
-      <section class="col-md-6 order-md-1 p-4 border border-primary d-flex flex-column justify-content-center">
-        <h1 class="news-header mb-4">Stay updated!</h1>
-
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-      
-        <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-      
-        <form>
-          <div class="form-group">
-            <label class="mb-2" for="email">Email address</label>
-            <input class="mb-3 px-4 py-2 form-control" type="text" name="email" placeholder="email@company.com">
-          </div> 
-      
-          <button class="btn px-5 py-2" id="button" type="submit" >Subscribe to monthly newsletter</button>
-        </form>
-      </section>
-    </div>
-    <!-- Sign-up form end -->
-  
-    <!-- Success message start -->
-    <section class="d-none">
-      Thanks for subscribing!
-
-      A confirmation email has been sent to ash@loremcompany.com. 
-      Please open it and click the button inside to confirm your subscription.
-
-      Dismiss message
-    </section>
-    <!-- Success message end -->
-  </main>
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+    </main>
+  </body>
 </html>
